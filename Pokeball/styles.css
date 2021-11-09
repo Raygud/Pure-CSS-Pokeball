@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: burlywood;
+}
+
+
+body > div {
+    position: relative;
+    margin-left: 20vw;
+    margin-top: 10vw;
+    height: 10vw;
+    width: 10vw;
+}
+
+body > div > div:nth-child(1) {
+    position: absolute;
+    top: 0.7vw;
+    left: 1vw;
+    width: 8vw;
+    height: 4vw;
+    background-color: rgb(255, 0, 0);
+    border-radius: 150px 150px 0 0;
+    border: solid;
+    border-bottom: rgba(255, 255, 255, 0);
+    box-shadow: inset -10px 10px 10px rgba(0,0,0,0.5);
+    transform: rotate(0deg);
+    transform-origin: right;
+    background: radial-gradient(ellipse at 50% 100%, transparent 20%, rgb(224, 11, 11) 20%);
+}
+
+body > div > div:nth-child(2) {
+    position: absolute;
+    bottom: 0.84vw;
+    left: 1vw;
+    width: 8vw;
+    height: 4vw;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 0 150px 150px;
+    border: solid;
+    box-shadow: inset -10px -10px 10px rgba(0,0,0,0.5);
+}
+
+body > div > div:nth-child(2) > div {
+    position: absolute;
+    top: -1.4vw;
+    left: 2.8vw;
+    width: 1.6vw;
+    height: 1.6vw;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 10px black;
+    border-radius: 100%;
+    border: 8px solid;
+}
+
+body > div > div:nth-child(2) > div > div {
+    position: absolute;
+    top: 0.25vw;
+    left: 0.25vw;
+    width: 0.8vw;
+    height: 0.8vw;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    border: 3px solid;
+}
+
+body > div > div:nth-child(2) > div > div > div {
+    transition: 500ms ease-in-out;
+    position: absolute;
+    top: -7vw;
+    left: -4.35vw;
+    width: 9.4vw;
+    height: 7.5vw;
+    z-index: -1;
+    overflow: hidden;
+}
+
+body > div > div:nth-child(2) > div > div > div > img  {
+    transition: 500ms ease-in-out;
+    width: 100%;
+    margin-top: 3vw;
+}
+
+body > div > div:nth-child(3){
+    position: absolute;
+  top: 3.6vw;
+  right: 3.7vw;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow:
+    0 0 60px 30px rgba(255, 255, 255, 0),
+    0 0 100px 60px rgba(255, 255, 255, 0),
+    0 0 140px 90px rgba(255, 255, 255, 0);
+    z-index: -2;
+    
+}
+
+.UpperAni {
+    animation: OpeningBall 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.Glow {
+    animation: Glow 2.5s;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes OpeningBall {
+    0%{ top: 0.7vw;
+        left: 1vw;
+        box-shadow: inset -10px 10px 10px rgba(0,0,0,0.5);
+        transform: rotate(0deg);
+        transform-origin: right;}
+    100%{ top: 4vw;
+        left: 2.55vw;
+        box-shadow: inset -10px 10px 10px rgba(0,0,0,0.5);
+        transform: rotate(120deg);
+        transform-origin: right;}
+}
+
+@keyframes Glow {
+    0%{ box-shadow:
+        0 0 60px 30px rgba(255, 255, 255, 0),
+        0 0 100px 60px rgba(255, 255, 255, 0),
+        0 0 140px 90px rgba(255, 255, 255, 0);}
+    50%{box-shadow:
+        0 0 60px 30px rgb(255, 255, 255),
+        0 0 100px 60px rgb(255, 255, 255),
+        0 0 140px 90px rgb(255, 255, 255);}
+    100%{ box-shadow:
+        0 0 60px 30px rgba(255, 255, 255, 0),
+        0 0 100px 60px rgba(255, 255, 255, 0),
+        0 0 140px 90px rgba(255, 255, 255, 0);}
+}
+
+
